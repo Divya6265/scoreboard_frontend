@@ -10,13 +10,11 @@ function App() {
       prevData.map((player) => {
         let username = player.name
         const avatarUrl = `https://robohash.org/${username}.png`;
-        console.log('player avatar', avatarUrl)
         return { ...player, avatar: avatarUrl }
       })
     );
   }, [])
 
-  console.log(data,'avatar')
 
   useEffect(() => {
     const events = new EventSource("https://scoreboard-server-owrr.onrender.com/event")
