@@ -19,7 +19,7 @@ function App() {
   console.log(data,'avatar')
 
   useEffect(() => {
-    const events = new EventSource("http://127.0.0.1:8000/event")
+    const events = new EventSource("https://scoreboard-server-owrr.onrender.com/event")
 
     events.addEventListener('add', (e) => {
       const parseData = JSON.parse(e.data)
